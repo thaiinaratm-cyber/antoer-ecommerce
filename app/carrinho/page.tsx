@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { Minus, Plus, ShoppingBag, Trash2 } from "lucide-react";
+import { ProductImage } from "@/components/product-image";
 import { useCart } from "@/context/cart-context";
 import { formatCurrency } from "@/lib/format";
 
@@ -40,7 +40,7 @@ export default function CartPage() {
           {items.map((item) => (
             <article key={item.product.id} className="grid gap-4 rounded-lg border border-black/10 bg-white p-4 shadow-sm sm:grid-cols-[120px_1fr]">
               <div className="relative aspect-square overflow-hidden rounded-md bg-champagne">
-                <Image src={item.product.images[0]} alt={item.product.name} fill sizes="120px" className="object-cover" />
+                <ProductImage src={item.product.images?.[0]} alt={item.product.name} sizes="120px" className="object-cover" />
               </div>
               <div className="grid gap-4">
                 <div>

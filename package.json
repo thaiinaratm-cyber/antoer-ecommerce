@@ -1,10 +1,12 @@
 {
   "name": "antoer-ecommerce",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "import-products": "node scripts/import-products.ts",
     "start": "next start",
     "lint": "next lint"
   },

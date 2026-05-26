@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { AddToCartButton } from "@/components/add-to-cart-button";
+import { ProductImage } from "@/components/product-image";
 import type { Product } from "@/types/product";
 
 export function ProductCard({ product }: { product: Product }) {
@@ -8,10 +8,9 @@ export function ProductCard({ product }: { product: Product }) {
     <article className="group overflow-hidden rounded-lg border border-black/10 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
       <Link href={`/produtos/${product.slug}`} className="block">
         <div className="relative aspect-[4/5] overflow-hidden bg-champagne">
-          <Image
-            src={product.images[0]}
+          <ProductImage
+            src={product.images?.[0]}
             alt={product.name}
-            fill
             sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
             className="object-cover transition duration-500 group-hover:scale-105"
           />

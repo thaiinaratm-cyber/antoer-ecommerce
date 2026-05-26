@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronLeft, MessageCircle } from "lucide-react";
 import { AddToCartButton } from "@/components/add-to-cart-button";
+import { ProductImage } from "@/components/product-image";
 import { ProductGrid } from "@/components/product-grid";
 import { getProductBySlug, getProductsByCategory } from "@/lib/products";
 import { buildQuoteUrl } from "@/lib/whatsapp";
@@ -30,7 +30,13 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
       </Link>
       <div className="mt-6 grid gap-8 lg:grid-cols-[1fr_0.9fr]">
         <div className="relative aspect-[4/5] overflow-hidden rounded-lg bg-champagne shadow-soft">
-          <Image src={product.images[0]} alt={product.name} fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" priority />
+          <ProductImage
+            src={product.images?.[0]}
+            alt={product.name}
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover"
+            priority
+          />
         </div>
         <div className="self-center">
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-gold">{product.category}</p>

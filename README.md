@@ -16,8 +16,34 @@ E-commerce mobile-first em Next.js, TypeScript, Tailwind CSS, Context API e loca
 ```bash
 npm install
 npm run dev
+npm run import-products
 npm run build
 ```
+
+## Cadastro de produtos por CSV
+
+Edite a planilha em `data/import/produtos.csv` e rode:
+
+```bash
+npm run import-products
+```
+
+O CSV deve ser salvo em UTF-8 e separado por ponto e vírgula (`;`). Esse é o formato esperado pelo Excel em português do Brasil, mantendo as colunas separadas e acentos corretos como `Alianças`, `Anéis`, `Serviços` e `Orçamento`.
+
+O script lê o CSV e recria automaticamente `data/products.ts`, que é o arquivo usado pela loja. As colunas são:
+
+`name`, `category`, `subcategory`, `material`, `price`, `priceLabel`, `installments`, `description`, `image`, `featured`, `isCustomOrder`, `allowWhatsappQuote`, `stockStatus`.
+
+Regras importantes:
+
+- Use `;` como separador de colunas.
+- Para centavos, use vírgula, por exemplo `249,90`.
+- `price` vazio gera produto sob orçamento com `price: null`.
+- `featured`, `isCustomOrder` e `allowWhatsappQuote` aceitam `sim` ou `não`.
+- `stockStatus` aceita `disponível`, `sob encomenda` ou `indisponível`.
+- A coluna `image` deve ter só o nome do arquivo, por exemplo `anel-ouro.jpg`; o script gera `/produtos/anel-ouro.jpg`.
+- Coloque as imagens reais em `public/produtos/` com o mesmo nome informado na planilha.
+- O script gera `id` e `slug` automaticamente a partir do nome do produto.
 
 ## Integrações futuras previstas
 
