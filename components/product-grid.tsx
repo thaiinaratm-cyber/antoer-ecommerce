@@ -1,11 +1,17 @@
 import { ProductCard } from "@/components/product-card";
 import type { Product } from "@/types/product";
 
-export function ProductGrid({ products }: { products: Product[] }) {
+export function ProductGrid({
+  products,
+  emptyMessage = "Nenhum produto encontrado com os filtros selecionados."
+}: {
+  products: Product[];
+  emptyMessage?: string;
+}) {
   if (products.length === 0) {
     return (
       <div className="rounded-lg border border-dashed border-black/20 bg-white p-8 text-center text-taupe">
-        Nenhum produto encontrado com os filtros selecionados.
+        {emptyMessage}
       </div>
     );
   }

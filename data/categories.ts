@@ -13,6 +13,9 @@ export const categories: Category[] = [
     slug: "aliancas",
     description: "Modelos em ouro, prata, namoro, casamento e projetos sob encomenda.",
     subcategories: [
+      "Alianças Ouro 18k",
+      "Alianças Prata",
+      "Alianças Banhado a Ouro",
       "Alianças de Ouro 18k/750",
       "Alianças de Prata",
       "Alianças de Namoro",
@@ -25,7 +28,7 @@ export const categories: Category[] = [
     name: "Anéis",
     slug: "aneis",
     description: "Anéis femininos, masculinos e solitários com acabamento refinado.",
-    subcategories: ["Anéis em Ouro", "Anéis em Prata", "Solitários", "Anéis femininos", "Anéis masculinos"]
+    subcategories: ["Anéis em Ouro", "Anéis em Prata", "Solitários", "Anéis de Formatura", "Anéis femininos", "Anéis masculinos"]
   },
   {
     name: "Brincos",

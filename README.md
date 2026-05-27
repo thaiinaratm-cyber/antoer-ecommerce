@@ -45,6 +45,42 @@ Regras importantes:
 - Coloque as imagens reais em `public/produtos/` com o mesmo nome informado na planilha.
 - O script gera `id` e `slug` automaticamente a partir do nome do produto.
 
+## Gerar produtos por imagens
+
+Coloque novas imagens em `public/produtos/importar` e rode:
+
+```bash
+npm run gerar-produtos
+```
+
+O gerador lê apenas essa pasta de importação, cria novas linhas em `data/import/produtos.csv`, move as imagens para `public/produtos` e roda o importador para atualizar `data/products.ts`. Produtos já existentes não são duplicados.
+
+O nome do arquivo ajuda o sistema a identificar categoria, material e preço. Exemplos:
+
+- `anel-ouro-18k-perola-990.jpg`
+- `brinco-ponto-luz-zirconia-179.jpg`
+- `alianca-prata-950-namoro-380.jpg`
+- `alianca-ouro-18k-pedra-4200.png`
+- `alianca-banhado-ouro-classica-299.webp`
+
+Para preços, use o último número do nome do arquivo. Exemplo: `alianca-ouro-18k-pedra-4200.png` gera `R$ 4.200,00`. Se não houver preço, o produto fica como `Sob orçamento`.
+
+Campos gerados automaticamente:
+
+- `description` com texto comercial em português do Brasil.
+- `priceLabel` em formato `R$ 990,00`, ou `Sob orçamento` quando não houver preço.
+- `installments` como `Até 6x sem juros`, ou `Consulte condições de parcelamento` quando não houver preço.
+- `featured: não`
+- `allowWhatsappQuote: sim`
+- `stockStatus: disponível`
+- `isCustomOrder: sim` apenas para alianças sob encomenda ou serviços sob orçamento.
+
+Regras especiais para alianças no gerador:
+
+- `ouro-18k` ou `ouro18k`: `subcategory = Alianças Ouro 18k`, `material = Ouro 18k`, `installments = Até 12x sem juros`, `stockStatus = sob encomenda`, `isCustomOrder = sim`.
+- `prata`, `prata-925` ou `prata-950`: `subcategory = Alianças Prata`, `material = Prata`, `Prata 925` ou `Prata 950`, `installments = Até 6x sem juros`, `stockStatus = disponível`, `isCustomOrder = não`.
+- `banhado-ouro`, `banhadoouro`, `banho-de-ouro` ou `folheado-ouro`: `subcategory = Alianças Banhado a Ouro`, `material = Banhado a ouro`, `installments = Até 6x sem juros`, `stockStatus = disponível`, `isCustomOrder = não`.
+
 ## Integrações futuras previstas
 
 A estrutura está separada para evoluir com painel admin, Supabase, upload de imagens, controle de pedidos e pagamentos por Mercado Pago ou Stripe, sem reescrever o catálogo atual.

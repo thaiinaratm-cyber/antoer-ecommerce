@@ -3,6 +3,8 @@ import Link from "next/link";
 import { ArrowRight, BadgeCheck, Gem, ShieldCheck, Sparkles } from "lucide-react";
 import { categories } from "@/data/categories";
 import { getFeaturedProducts } from "@/lib/products";
+import { FaqSection } from "@/components/faq-section";
+import { HelpCard } from "@/components/help-card";
 import { ProductGrid } from "@/components/product-grid";
 
 export default function HomePage() {
@@ -96,6 +98,8 @@ export default function HomePage() {
         </div>
         <ProductGrid products={featuredProducts} />
       </section>
+      <HelpCard />
+      <FaqSection compact />
     </>
   );
 }

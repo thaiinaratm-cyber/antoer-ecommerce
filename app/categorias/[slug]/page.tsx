@@ -1,6 +1,73 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ProductGrid } from "@/components/product-grid";
 import { getCategoryBySlug, getProductsByCategory } from "@/lib/products";
+import type { Product } from "@/types/product";
+
+const allianceFilters = [
+  { label: "Ouro 18k/750", slug: "ouro-18k-750" },
+  { label: "Prata 950", slug: "prata-950" },
+  { label: "Banhado a Ouro", slug: "banhado-a-ouro" },
+  { label: "Moeda", slug: "moeda" }
+];
+
+function filterSlug(value: string) {
+  return value
+    .trim()
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function searchableProductText(product: Product) {
+  return [product.name, product.material, product.subcategory].map(filterSlug).join(" ");
+}
+
+function matchesAllianceFilter(product: Product, selectedFilter: string) {
+  const text = searchableProductText(product);
+  const material = filterSlug(product.material);
+  const subcategory = filterSlug(product.subcategory);
+
+  if (selectedFilter === "ouro-18k-750") {
+    return (
+      material === "ouro-18k" ||
+      material === "ouro-18k-750" ||
+      text.includes("ouro-18k") ||
+      text.includes("ouro18k") ||
+      text.includes("18k") ||
+      text.includes("750") ||
+      subcategory.includes("ouro-18k") ||
+      subcategory.includes("ouro-18k-750")
+    );
+  }
+
+  if (selectedFilter === "prata-950") {
+    return (
+      material === "prata-950" ||
+      text.includes("prata-950") ||
+      subcategory.includes("prata-950") ||
+      subcategory.includes("aliancas-prata")
+    );
+  }
+
+  if (selectedFilter === "banhado-a-ouro") {
+    return (
+      material === "banhado-a-ouro" ||
+      text.includes("banhado") ||
+      text.includes("folheado") ||
+      text.includes("banho-de-ouro") ||
+      subcategory.includes("banhado-a-ouro")
+    );
+  }
+
+  if (selectedFilter === "moeda") {
+    return material === "moeda" || text.includes("moeda") || subcategory.includes("moeda");
+  }
+
+  return false;
+}
 
 export function generateMetadata({ params }: { params: { slug: string } }) {
   const category = getCategoryBySlug(params.slug);
@@ -9,7 +76,13 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   };
 }
 
-export default function CategoryPage({ params }: { params: { slug: string } }) {
+export default function CategoryPage({
+  params,
+  searchParams
+}: {
+  params: { slug: string };
+  searchParams?: { subcategoria?: string };
+}) {
   const category = getCategoryBySlug(params.slug);
 
   if (!category) {
@@ -17,6 +90,22 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
   }
 
   const categoryProducts = getProductsByCategory(category.name);
+  const selectedSubcategory = searchParams?.subcategoria ?? "";
+  const isAllianceCategory = category.slug === "aliancas";
+  const subcategories = isAllianceCategory
+    ? []
+    : Array.from(new Set([...category.subcategories, ...categoryProducts.map((product) => product.subcategory)])).filter(Boolean);
+  const filteredProducts = selectedSubcategory
+    ? categoryProducts.filter((product) =>
+        isAllianceCategory
+          ? matchesAllianceFilter(product, selectedSubcategory)
+          : filterSlug(product.subcategory) === selectedSubcategory
+      )
+    : categoryProducts;
+  const filterOptions = isAllianceCategory ? allianceFilters : subcategories.map((subcategory) => ({
+    label: subcategory,
+    slug: filterSlug(subcategory)
+  }));
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
@@ -26,13 +115,38 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
         <p className="mt-4 leading-7 text-taupe">{category.description}</p>
       </div>
       <div className="mb-8 flex flex-wrap gap-2">
-        {category.subcategories.map((subcategory) => (
-          <span key={subcategory} className="rounded-full border border-black/10 bg-white px-3 py-2 text-xs font-medium text-ink">
-            {subcategory}
-          </span>
-        ))}
+        <Link
+          href={`/categorias/${category.slug}`}
+          className={`rounded-full border px-3 py-2 text-xs font-medium transition ${
+            selectedSubcategory
+              ? "border-black/10 bg-white text-ink hover:border-gold hover:text-gold"
+              : "border-ink bg-ink text-white"
+          }`}
+        >
+          Todos
+        </Link>
+        {filterOptions.map((filter) => {
+          const isActive = selectedSubcategory === filter.slug;
+
+          return (
+            <Link
+              key={filter.slug}
+              href={`/categorias/${category.slug}?subcategoria=${filter.slug}`}
+              className={`rounded-full border px-3 py-2 text-xs font-medium transition ${
+                isActive
+                  ? "border-ink bg-ink text-white"
+                  : "border-black/10 bg-white text-ink hover:border-gold hover:text-gold"
+              }`}
+            >
+              {filter.label}
+            </Link>
+          );
+        })}
       </div>
-      <ProductGrid products={categoryProducts} />
+      <ProductGrid
+        products={filteredProducts}
+        emptyMessage={selectedSubcategory ? "Nenhum produto encontrado nesta subcategoria." : undefined}
+      />
     </section>
   );
 }

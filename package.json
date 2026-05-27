@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "gerar-produtos": "node scripts/gerar-produtos.ts",
     "import-products": "node scripts/import-products.ts",
     "start": "next start",
     "lint": "next lint"
