@@ -11,7 +11,7 @@ export const products: Product[] = [
     "price": null,
     "priceLabel": "Sob orçamento",
     "installments": "Consulte condições de parcelamento",
-    "description": "Aliança em ouro 18k com acabamento elegante, feita sob encomenda para momentos especiais. Confeccionamos diversos modelos em até 3 dias. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 12x sem juros pelo WhatsApp.",
+    "description": "Aliança em ouro 18k/750 com acabamento elegante, feita sob encomenda para momentos especiais. Confeccionamos diversos modelos em até 3 dias. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 12x sem juros pelo WhatsApp.",
     "images": [
       "/produtos/aliancas-prata-950.png"
     ],
@@ -30,7 +30,7 @@ export const products: Product[] = [
     "price": null,
     "priceLabel": "Sob orçamento",
     "installments": "Consulte condições de parcelamento",
-    "description": "Aliança em ouro 18k com acabamento elegante, feita sob encomenda para momentos especiais. Confeccionamos diversos modelos em até 3 dias. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 12x sem juros pelo WhatsApp.",
+    "description": "Aliança em ouro 18k/750 com acabamento elegante, feita sob encomenda para momentos especiais. Confeccionamos diversos modelos em até 3 dias. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 12x sem juros pelo WhatsApp.",
     "images": [
       "/produtos/aliancas-ouro-18k-anatomicas.jpg"
     ],
@@ -49,7 +49,7 @@ export const products: Product[] = [
     "price": 249.9,
     "priceLabel": "R$ 249,90",
     "installments": "Até 3x sem juros",
-    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
     "images": [
       "/produtos/aliancas-prata-namoro.jpg"
     ],
@@ -296,7 +296,7 @@ export const products: Product[] = [
     "price": 4200,
     "priceLabel": "R$ 4.200,00",
     "installments": "Até 6x sem juros",
-    "description": "Aliança em ouro 18k com acabamento elegante, feita sob encomenda para momentos especiais. Confeccionamos diversos modelos em até 3 dias. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 12x sem juros pelo WhatsApp.",
+    "description": "Aliança em ouro 18k/750 com acabamento elegante, feita sob encomenda para momentos especiais. Confeccionamos diversos modelos em até 3 dias. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 12x sem juros pelo WhatsApp.",
     "images": [
       "/produtos/alianca-ouro-18k-pedra-4200.png"
     ],
@@ -315,7 +315,7 @@ export const products: Product[] = [
     "price": 380,
     "priceLabel": "R$ 380,00",
     "installments": "Até 6x sem juros",
-    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
     "images": [
       "/produtos/alianca-prata-namoro-380.png"
     ],
@@ -334,7 +334,7 @@ export const products: Product[] = [
     "price": 590,
     "priceLabel": "R$ 590,00",
     "installments": "Até 6x sem juros",
-    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
     "images": [
       "/produtos/alianca-prata-950-ancora-590.png"
     ],
@@ -353,7 +353,7 @@ export const products: Product[] = [
     "price": 320,
     "priceLabel": "R$ 320,00",
     "installments": "Até 6x sem juros",
-    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
     "images": [
       "/produtos/alianca-prata-950-chanfrado-320.png"
     ],
@@ -372,7 +372,7 @@ export const products: Product[] = [
     "price": 580,
     "priceLabel": "R$ 580,00",
     "installments": "Até 6x sem juros",
-    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
     "images": [
       "/produtos/alianca-prata-950-coracao-580.png"
     ],
@@ -391,7 +391,7 @@ export const products: Product[] = [
     "price": 590,
     "priceLabel": "R$ 590,00",
     "installments": "Até 6x sem juros",
-    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
     "images": [
       "/produtos/alianca-prata-950-coracao-590.png"
     ],
@@ -410,7 +410,7 @@ export const products: Product[] = [
     "price": 1400,
     "priceLabel": "R$ 1.400,00",
     "installments": "Até 6x sem juros",
-    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
     "images": [
       "/produtos/alianca-prata-950-coroa-1400.png"
     ],
@@ -429,7 +429,7 @@ export const products: Product[] = [
     "price": 380,
     "priceLabel": "R$ 380,00",
     "installments": "Até 6x sem juros",
-    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
     "images": [
       "/produtos/alianca-prata-950-namoro-380 (2).png"
     ],
@@ -448,7 +448,7 @@ export const products: Product[] = [
     "price": 380,
     "priceLabel": "R$ 380,00",
     "installments": "Até 6x sem juros",
-    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
     "images": [
       "/produtos/alianca-prata-950-namoro-380.png"
     ],
@@ -467,7 +467,7 @@ export const products: Product[] = [
     "price": 410,
     "priceLabel": "R$ 410,00",
     "installments": "Até 6x sem juros",
-    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
     "images": [
       "/produtos/alianca-prata-950-namoro-410.png"
     ],
@@ -486,7 +486,7 @@ export const products: Product[] = [
     "price": 580,
     "priceLabel": "R$ 580,00",
     "installments": "Até 6x sem juros",
-    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
     "images": [
       "/produtos/alianca-prata-950-namoro-580.png"
     ],
@@ -508,6 +508,880 @@ export const products: Product[] = [
     "description": "Anel em Prata 950 solitário, ideal para compor produções elegantes e presentear em momentos especiais. Peça com visual sofisticado inspirada em anel solitario prata. Consulte disponibilidade, aro e condições pelo WhatsApp.",
     "images": [
       "/produtos/anel-solitario-prata-950-160.png"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-ouro-18k-fosca-3600-jpeg",
+    "name": "Aliança Ouro 18k Fosca 3600.jpeg",
+    "slug": "alianca-ouro-18k-fosca-3600-jpeg",
+    "category": "Alianças",
+    "subcategory": "Alianças Ouro 18k",
+    "material": "Ouro 18k",
+    "price": null,
+    "priceLabel": "Sob orçamento",
+    "installments": "Consulte condições de parcelamento",
+    "description": "Aliança em ouro 18k/750 com acabamento elegante, feita sob encomenda para momentos especiais. Confeccionamos diversos modelos em até 3 dias. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 12x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-ouro-18k-fosca-3600.jpeg.png"
+    ],
+    "featured": false,
+    "isCustomOrder": true,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Sob encomenda"
+  },
+  {
+    "id": "alianca-ouro-18k-fosca",
+    "name": "Aliança Ouro 18k Fosca",
+    "slug": "alianca-ouro-18k-fosca",
+    "category": "Alianças",
+    "subcategory": "Alianças Ouro 18k",
+    "material": "Ouro 18k",
+    "price": 3600,
+    "priceLabel": "R$ 3.600,00",
+    "installments": "Até 12x sem juros",
+    "description": "Aliança em ouro 18k/750 com acabamento elegante, feita sob encomenda para momentos especiais. Confeccionamos diversos modelos em até 3 dias. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 12x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-ouro-18k-fosca-3600.png"
+    ],
+    "featured": false,
+    "isCustomOrder": true,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Sob encomenda"
+  },
+  {
+    "id": "alianca-ouro-18k-fosca-polida",
+    "name": "Aliança Ouro 18k Fosca Polida",
+    "slug": "alianca-ouro-18k-fosca-polida",
+    "category": "Alianças",
+    "subcategory": "Alianças Ouro 18k",
+    "material": "Ouro 18k",
+    "price": 2900,
+    "priceLabel": "R$ 2.900,00",
+    "installments": "Até 12x sem juros",
+    "description": "Aliança em ouro 18k/750 com acabamento elegante, feita sob encomenda para momentos especiais. Confeccionamos diversos modelos em até 3 dias. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 12x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-ouro-18k-fosca-polida-2900.png"
+    ],
+    "featured": false,
+    "isCustomOrder": true,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Sob encomenda"
+  },
+  {
+    "id": "alianca-ouro-18k-frezo",
+    "name": "Aliança Ouro 18k Frezo",
+    "slug": "alianca-ouro-18k-frezo",
+    "category": "Alianças",
+    "subcategory": "Alianças Ouro 18k",
+    "material": "Ouro 18k",
+    "price": 5900,
+    "priceLabel": "R$ 5.900,00",
+    "installments": "Até 12x sem juros",
+    "description": "Aliança em ouro 18k/750 com acabamento elegante, feita sob encomenda para momentos especiais. Confeccionamos diversos modelos em até 3 dias. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 12x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-ouro-18k-frezo-5900.png"
+    ],
+    "featured": false,
+    "isCustomOrder": true,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Sob encomenda"
+  },
+  {
+    "id": "alianca-ouro-18k-lisa",
+    "name": "Aliança Ouro 18k Lisa",
+    "slug": "alianca-ouro-18k-lisa",
+    "category": "Alianças",
+    "subcategory": "Alianças Ouro 18k",
+    "material": "Ouro 18k",
+    "price": 3600,
+    "priceLabel": "R$ 3.600,00",
+    "installments": "Até 12x sem juros",
+    "description": "Aliança em ouro 18k/750 com acabamento elegante, feita sob encomenda para momentos especiais. Confeccionamos diversos modelos em até 3 dias. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 12x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-ouro-18k-lisa-3600.png"
+    ],
+    "featured": false,
+    "isCustomOrder": true,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Sob encomenda"
+  },
+  {
+    "id": "alianca-ouro-18k-pedra-2",
+    "name": "Aliança Ouro 18k Pedra",
+    "slug": "alianca-ouro-18k-pedra-2",
+    "category": "Alianças",
+    "subcategory": "Alianças Ouro 18k",
+    "material": "Ouro 18k",
+    "price": 7200,
+    "priceLabel": "R$ 7.200,00",
+    "installments": "Até 12x sem juros",
+    "description": "Aliança em ouro 18k/750 com acabamento elegante, feita sob encomenda para momentos especiais. Confeccionamos diversos modelos em até 3 dias. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 12x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-ouro-18k-pedra-7200.png"
+    ],
+    "featured": false,
+    "isCustomOrder": true,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Sob encomenda"
+  },
+  {
+    "id": "alianca-ouro-18k-pedra-3",
+    "name": "Aliança Ouro 18k Pedra",
+    "slug": "alianca-ouro-18k-pedra-3",
+    "category": "Alianças",
+    "subcategory": "Alianças Ouro 18k",
+    "material": "Ouro 18k",
+    "price": 8600,
+    "priceLabel": "R$ 8.600,00",
+    "installments": "Até 12x sem juros",
+    "description": "Aliança em ouro 18k/750 com acabamento elegante, feita sob encomenda para momentos especiais. Confeccionamos diversos modelos em até 3 dias. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 12x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-ouro-18k-pedra-8600.png"
+    ],
+    "featured": false,
+    "isCustomOrder": true,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Sob encomenda"
+  },
+  {
+    "id": "alianca-ouro-18k-personalizado",
+    "name": "Aliança Ouro 18k Personalizado",
+    "slug": "alianca-ouro-18k-personalizado",
+    "category": "Alianças",
+    "subcategory": "Alianças Ouro 18k",
+    "material": "Ouro 18k",
+    "price": 7800,
+    "priceLabel": "R$ 7.800,00",
+    "installments": "Até 12x sem juros",
+    "description": "Aliança em ouro 18k/750 com acabamento elegante, feita sob encomenda para momentos especiais. Confeccionamos diversos modelos em até 3 dias. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 12x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-ouro-18k-personalizado-7800.png"
+    ],
+    "featured": false,
+    "isCustomOrder": true,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Sob encomenda"
+  },
+  {
+    "id": "alianca-ouro-18k-quadrado",
+    "name": "Aliança Ouro 18k Quadrado",
+    "slug": "alianca-ouro-18k-quadrado",
+    "category": "Alianças",
+    "subcategory": "Alianças Ouro 18k",
+    "material": "Ouro 18k",
+    "price": 3500,
+    "priceLabel": "R$ 3.500,00",
+    "installments": "Até 12x sem juros",
+    "description": "Aliança em ouro 18k/750 com acabamento elegante, feita sob encomenda para momentos especiais. Confeccionamos diversos modelos em até 3 dias. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 12x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-ouro-18k-quadrado-3500.png"
+    ],
+    "featured": false,
+    "isCustomOrder": true,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Sob encomenda"
+  },
+  {
+    "id": "anel-ouro-18k-meia-ailanca-pedra",
+    "name": "Anel Ouro 18k Meia Ailanca Pedra",
+    "slug": "anel-ouro-18k-meia-ailanca-pedra",
+    "category": "Anéis",
+    "subcategory": "Anéis em Ouro",
+    "material": "Ouro 18k",
+    "price": 4800,
+    "priceLabel": "R$ 4.800,00",
+    "installments": "Até 12x sem juros",
+    "description": "Anel em Ouro 18k, ideal para compor produções elegantes e presentear em momentos especiais. Peça com visual sofisticado inspirada em anel ouro 18k meia ailanca pedra. Consulte disponibilidade, aro e condições pelo WhatsApp.",
+    "images": [
+      "/produtos/anel-ouro-18k-meia-ailanca-pedra-4800.png"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-prata-950-batimento-cardiaco",
+    "name": "Aliança Prata 950 Batimento Cardiaco",
+    "slug": "alianca-prata-950-batimento-cardiaco",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 590,
+    "priceLabel": "R$ 590,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-prata-950-batimento-cardiaco-590.png"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-prata-950-coracao-3",
+    "name": "Aliança Prata 950 Coração",
+    "slug": "alianca-prata-950-coracao-3",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 420,
+    "priceLabel": "R$ 420,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-prata-950-coracao-420.png"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-prata-950-coracao-pedra",
+    "name": "Aliança Prata 950 Coração Pedra",
+    "slug": "alianca-prata-950-coracao-pedra",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 480,
+    "priceLabel": "R$ 480,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-prata-950-coracao-pedra-480.png"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-prata-950-namoro-4",
+    "name": "Aliança Prata 950 Namoro",
+    "slug": "alianca-prata-950-namoro-4",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 320,
+    "priceLabel": "R$ 320,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-prata-950-namoro-320.png"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-prata-950-namoro-5",
+    "name": "Aliança Prata 950 Namoro",
+    "slug": "alianca-prata-950-namoro-5",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 390,
+    "priceLabel": "R$ 390,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-prata-950-namoro-390.png"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-prata-950-notas-musicais",
+    "name": "Aliança Prata 950 Notas Musicais",
+    "slug": "alianca-prata-950-notas-musicais",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 490,
+    "priceLabel": "R$ 490,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-prata-950-notas-musicais-490.png"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-prata-950-patas",
+    "name": "Aliança Prata 950 Patas",
+    "slug": "alianca-prata-950-patas",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 460,
+    "priceLabel": "R$ 460,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-prata-950-patas-460.png"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-prata-950-pedras",
+    "name": "Aliança Prata 950 Pedras",
+    "slug": "alianca-prata-950-pedras",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 780,
+    "priceLabel": "R$ 780,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-prata-950-pedras-780.png"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-prata-950-pedras-azul",
+    "name": "Aliança Prata 950 Pedras Azul",
+    "slug": "alianca-prata-950-pedras-azul",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 520,
+    "priceLabel": "R$ 520,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-prata-950-pedras-azul-520.png"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-prata-950-pedras-coloridas",
+    "name": "Aliança Prata 950 Pedras Coloridas",
+    "slug": "alianca-prata-950-pedras-coloridas",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 580,
+    "priceLabel": "R$ 580,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-prata-950-pedras-coloridas-580.png"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-prata-950-persolaziada",
+    "name": "Aliança Prata 950 Persolaziada",
+    "slug": "alianca-prata-950-persolaziada",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 610,
+    "priceLabel": "R$ 610,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-prata-950-persolaziada-610.png"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-prata-950-personalizado",
+    "name": "Aliança Prata 950 Personalizado",
+    "slug": "alianca-prata-950-personalizado",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 440,
+    "priceLabel": "R$ 440,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-prata-950-personalizado-440.png"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "combo-aliancas-prata-950-anel-solitario",
+    "name": "Combo Alianças Prata 950 + Anel Solitário",
+    "slug": "combo-aliancas-prata-950-anel-solitario",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 380,
+    "priceLabel": "R$ 380,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/combo-alianca-prata-950-solitario-380.png"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "combo-aliancas-prata-950-anel-solitario-2",
+    "name": "Combo Alianças Prata 950 + Anel Solitário",
+    "slug": "combo-aliancas-prata-950-anel-solitario-2",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 390,
+    "priceLabel": "R$ 390,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/combo-alianca-prata-950-solitario-390.png"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "combo-aliancas-prata-950-anel-solitario-3",
+    "name": "Combo Alianças Prata 950 + Anel Solitário",
+    "slug": "combo-aliancas-prata-950-anel-solitario-3",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 490,
+    "priceLabel": "R$ 490,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/combo-alianca-prata-950-solitario-490.png"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "combo-aliancas-prata-950-anel-solitario-4",
+    "name": "Combo Alianças Prata 950 + Anel Solitário",
+    "slug": "combo-aliancas-prata-950-anel-solitario-4",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 590,
+    "priceLabel": "R$ 590,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/combo-alianca-prata-950-solitario-590 (2).png"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "combo-aliancas-prata-950-anel-solitario-5",
+    "name": "Combo Alianças Prata 950 + Anel Solitário",
+    "slug": "combo-aliancas-prata-950-anel-solitario-5",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 590,
+    "priceLabel": "R$ 590,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/combo-alianca-prata-950-solitario-590.png"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-prata-950-coracao-vazado",
+    "name": "Aliança Prata 950 Coração Vazado",
+    "slug": "alianca-prata-950-coracao-vazado",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 340,
+    "priceLabel": "R$ 340,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-prata-950-coracao-vazado-340.jpg"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-prata-950-fosca",
+    "name": "Aliança Prata 950 Fosca",
+    "slug": "alianca-prata-950-fosca",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 380,
+    "priceLabel": "R$ 380,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-prata-950-fosca-380.jpg"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-prata-950-fosca-2",
+    "name": "Aliança Prata 950 Fosca",
+    "slug": "alianca-prata-950-fosca-2",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 410,
+    "priceLabel": "R$ 410,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-prata-950-fosca-410.jpg"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-prata-950-fosca-3",
+    "name": "Aliança Prata 950 Fosca",
+    "slug": "alianca-prata-950-fosca-3",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 590,
+    "priceLabel": "R$ 590,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-prata-950-fosca-590.jpg"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-prata-950-lisa-redonda",
+    "name": "Aliança Prata 950 Lisa Redonda",
+    "slug": "alianca-prata-950-lisa-redonda",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 280,
+    "priceLabel": "R$ 280,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-prata-950-lisa-redonda-280.jpg"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-prata-950-namoro-6",
+    "name": "Aliança Prata 950 Namoro",
+    "slug": "alianca-prata-950-namoro-6",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 320,
+    "priceLabel": "R$ 320,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-prata-950-namoro-320.jpg"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-prata-950-namoro-380-2-2",
+    "name": "Aliança Prata 950 Namoro 380 (2)",
+    "slug": "alianca-prata-950-namoro-380-2-2",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 380,
+    "priceLabel": "R$ 380,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-prata-950-namoro-380 (2).jpg"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-prata-950-namoro-380-3",
+    "name": "Aliança Prata 950 Namoro 380 (3)",
+    "slug": "alianca-prata-950-namoro-380-3",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 380,
+    "priceLabel": "R$ 380,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-prata-950-namoro-380 (3).jpg"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-prata-950-namoro-7",
+    "name": "Aliança Prata 950 Namoro",
+    "slug": "alianca-prata-950-namoro-7",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 380,
+    "priceLabel": "R$ 380,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-prata-950-namoro-380.jpg"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-prata-950-namoro-8",
+    "name": "Aliança Prata 950 Namoro",
+    "slug": "alianca-prata-950-namoro-8",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 440,
+    "priceLabel": "R$ 440,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-prata-950-namoro-440.jpg"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-prata-950-namoro-9",
+    "name": "Aliança Prata 950 Namoro",
+    "slug": "alianca-prata-950-namoro-9",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 470,
+    "priceLabel": "R$ 470,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-prata-950-namoro-470.jpg"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-prata-950-namoro-10",
+    "name": "Aliança Prata 950 Namoro",
+    "slug": "alianca-prata-950-namoro-10",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 560,
+    "priceLabel": "R$ 560,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-prata-950-namoro-560.jpg"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-prata-950-namoro-11",
+    "name": "Aliança Prata 950 Namoro",
+    "slug": "alianca-prata-950-namoro-11",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 620,
+    "priceLabel": "R$ 620,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-prata-950-namoro-620.jpg"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-prata-950-trabalhada-estrela",
+    "name": "Aliança Prata 950 Trabalhada Estrela",
+    "slug": "alianca-prata-950-trabalhada-estrela",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 430,
+    "priceLabel": "R$ 430,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-prata-950-trabalhada-estrela-430.jpg"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "alianca-prata-950-trabalhado",
+    "name": "Aliança Prata 950 Trabalhado",
+    "slug": "alianca-prata-950-trabalhado",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 590,
+    "priceLabel": "R$ 590,00",
+    "installments": "Até 6x sem juros",
+    "description": "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/alianca-prata-950-trabalhado-590.jpg"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "combo-aliancas-ouro-18k-anel-solitario",
+    "name": "Combo Alianças Ouro 18k + Anel Solitário",
+    "slug": "combo-aliancas-ouro-18k-anel-solitario",
+    "category": "Alianças",
+    "subcategory": "Alianças Ouro 18k",
+    "material": "Ouro 18k",
+    "price": 5200,
+    "priceLabel": "R$ 5.200,00",
+    "installments": "Até 12x sem juros",
+    "description": "Combo completo com par de alianças em ouro 18k e anel solitário, feito sob encomenda para momentos especiais. Confeccionamos diversos modelos em até 3 dias. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 12x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/combo-alianca-ouro-18k-solitario-5200.png"
+    ],
+    "featured": false,
+    "isCustomOrder": true,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Sob encomenda"
+  },
+  {
+    "id": "combo-aliancas-prata-950-anel-solitario-6",
+    "name": "Combo Alianças Prata 950 + Anel Solitário",
+    "slug": "combo-aliancas-prata-950-anel-solitario-6",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 299,
+    "priceLabel": "R$ 299,00",
+    "installments": "Até 6x sem juros",
+    "description": "Combo completo com par de alianças em prata 950 e anel solitário, ideal para pedidos de namoro e momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/combo-alianca-prata-950-solitario-299.jpg"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "combo-aliancas-prata-950-anel-solitario-7",
+    "name": "Combo Alianças Prata 950 + Anel Solitário",
+    "slug": "combo-aliancas-prata-950-anel-solitario-7",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 349,
+    "priceLabel": "R$ 349,00",
+    "installments": "Até 6x sem juros",
+    "description": "Combo completo com par de alianças em prata 950 e anel solitário, ideal para pedidos de namoro e momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/combo-alianca-prata-950-solitario-349.png"
+    ],
+    "featured": false,
+    "isCustomOrder": false,
+    "allowWhatsappQuote": true,
+    "stockStatus": "Disponível"
+  },
+  {
+    "id": "combo-aliancas-prata-950-anel-solitario-8",
+    "name": "Combo Alianças Prata 950 + Anel Solitário",
+    "slug": "combo-aliancas-prata-950-anel-solitario-8",
+    "category": "Alianças",
+    "subcategory": "Alianças Prata",
+    "material": "Prata 950",
+    "price": 299,
+    "priceLabel": "R$ 299,00",
+    "installments": "Até 6x sem juros",
+    "description": "Combo completo com par de alianças em prata 950 e anel solitário, ideal para pedidos de namoro e momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.",
+    "images": [
+      "/produtos/combo-alianca-prata-950-solitario-quadrado-liso-299.jpg"
     ],
     "featured": false,
     "isCustomOrder": false,

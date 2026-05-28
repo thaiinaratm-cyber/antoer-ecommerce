@@ -80,6 +80,7 @@ const accentWords: Record<string, string> = {
   classico: "Clássico",
   gravacao: "Gravação",
   coracao: "Coração",
+  solitario: "Solitário",
   masculino: "Masculino",
   feminina: "Feminina",
   feminino: "Feminino",
@@ -221,6 +222,10 @@ function hasOuro18k(tokens: string[]) {
   return tokens.includes("ouro18k") || (tokens.includes("ouro") && tokens.includes("18k"));
 }
 
+function hasAlliance(tokens: string[]) {
+  return tokens.some((token) => token.startsWith("alianca"));
+}
+
 function hasBanhadoOuro(tokens: string[]) {
   const joined = tokens.join("-");
   return (
@@ -229,6 +234,18 @@ function hasBanhadoOuro(tokens: string[]) {
     joined.includes("banho-de-ouro") ||
     joined.includes("folheado-ouro")
   );
+}
+
+function isAllianceSolitaireCombo(tokens: string[]) {
+  const joined = tokens.join("-");
+  const hasComboTerm =
+    tokens.includes("combo") ||
+    tokens.includes("kit") ||
+    tokens.includes("pacote") ||
+    tokens.includes("solitario") ||
+    joined.includes("anel-solitario");
+
+  return hasAlliance(tokens) && hasComboTerm;
 }
 
 function isGraduationRing(tokens: string[]) {
@@ -243,7 +260,7 @@ function isGraduationRing(tokens: string[]) {
 }
 
 function detectCategory(tokens: string[]) {
-  if (tokens.some((token) => token.startsWith("alianca"))) return "Alianças";
+  if (hasAlliance(tokens)) return "Alianças";
   if (tokens.some((token) => token.startsWith("anel") || token === "solitario")) return "Anéis";
   if (tokens.some((token) => token.startsWith("brinco") || token === "argola")) return "Brincos";
   if (tokens.some((token) => token.startsWith("corrente"))) return "Correntes";
@@ -263,6 +280,7 @@ function detectMaterial(tokens: string[]) {
   if (tokens.includes("prata") && tokens.includes("950")) return "Prata 950";
   if (tokens.includes("prata") && tokens.includes("925")) return "Prata 925";
   if (tokens.includes("prata")) return "Prata";
+  if (tokens.includes("moeda")) return "Moeda";
   if (tokens.includes("zirconia")) return "Zircônia";
   if (tokens.includes("perola")) return "Pérola";
   if (tokens.includes("semijoia")) return "Semijoia";
@@ -273,6 +291,7 @@ function detectSubcategory(category: string, tokens: string[], material: string)
   if (category === "Alianças") {
     if (material === "Ouro 18k") return "Alianças Ouro 18k";
     if (material === "Banhado a ouro") return "Alianças Banhado a Ouro";
+    if (material === "Moeda") return "Alianças Moeda";
     if (material.includes("Prata")) return "Alianças Prata";
     if (tokens.includes("sob") || tokens.includes("encomenda")) return "Alianças sob encomenda";
   }
@@ -298,6 +317,14 @@ function detectSubcategory(category: string, tokens: string[], material: string)
 }
 
 function buildName(tokens: string[], price: number | null) {
+  if (isAllianceSolitaireCombo(tokens)) {
+    const material = detectMaterial(tokens);
+    const materialName = material === "Banhado a ouro" ? "Banhado a Ouro" : material;
+    const suffix = materialName === "A definir" ? "" : ` ${materialName}`;
+
+    return `Combo Alianças${suffix} + Anel Solitário`;
+  }
+
   const cleanTokens = tokens.filter((token, index) => !(price !== null && token === String(price) && index === tokens.length - 1));
   const displayTokens = cleanTokens.reduce<string[]>((accumulator, token, index) => {
     const next = cleanTokens[index + 1];
@@ -337,14 +364,32 @@ function generateDescription(category: string, material: string, tokens: string[
   const has = (token: string) => tokens.includes(token);
 
   if (category === "Alianças") {
+    if (isAllianceSolitaireCombo(tokens)) {
+      if (material === "Ouro 18k") {
+        return "Combo completo com par de alianças em ouro 18k e anel solitário, feito sob encomenda para momentos especiais. Confeccionamos diversos modelos em até 3 dias. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 12x sem juros pelo WhatsApp.";
+      }
+      if (material === "Banhado a ouro") {
+        return "Combo completo com par de alianças banhadas a ouro e anel solitário, ideal para presentear em momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.";
+      }
+      if (material === "Prata 950") {
+        return "Combo completo com par de alianças em prata 950 e anel solitário, ideal para pedidos de namoro e momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.";
+      }
+      if (material.includes("Prata")) {
+        return `Combo completo com par de alianças em ${material.toLowerCase()} e anel solitário, ideal para pedidos de namoro e momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.`;
+      }
+    }
+
     if (material === "Ouro 18k") {
-      return "Aliança em ouro 18k com acabamento elegante, feita sob encomenda para momentos especiais. Confeccionamos diversos modelos em até 3 dias. Consulte numeração, gravação, prazo e parcelamento em até 12x sem juros pelo WhatsApp.";
+      return "Aliança em ouro 18k/750 com acabamento elegante, feita sob encomenda para momentos especiais. Confeccionamos diversos modelos em até 3 dias. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 12x sem juros pelo WhatsApp.";
     }
     if (material.includes("Prata")) {
-      return "Aliança em prata com visual delicado e ótimo acabamento. Consulte numeração, gravação, prazo e parcelamento em até 6x sem juros pelo WhatsApp.";
+      return "Aliança em prata 950 com visual delicado e ótimo acabamento, ideal para simbolizar momentos especiais. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.";
     }
     if (material === "Banhado a ouro") {
-      return "Aliança banhada a ouro com acabamento sofisticado e excelente apresentação. Consulte numeração, gravação, prazo e parcelamento em até 6x sem juros pelo WhatsApp.";
+      return "Aliança banhada a ouro com acabamento sofisticado e excelente apresentação. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e parcelamento em até 6x sem juros pelo WhatsApp.";
+    }
+    if (material === "Moeda") {
+      return "Aliança em moeda com visual marcante e ótimo acabamento. Gravação dos nomes e caixinha inclusas como cortesia. Consulte numeração, prazo e condições pelo WhatsApp.";
     }
     return "Aliança com acabamento elegante, feita sob encomenda para momentos especiais. Confeccionamos diversos modelos em até 3 dias. Consulte numeração, gravação, prazo e condições pelo WhatsApp.";
   }

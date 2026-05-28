@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, BadgeCheck, Gem, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowRight, BadgeCheck, Gem, MessageCircle, ShieldCheck, Sparkles } from "lucide-react";
 import { categories } from "@/data/categories";
+import { WHATSAPP_NUMBER } from "@/lib/constants";
 import { getFeaturedProducts } from "@/lib/products";
 import { FaqSection } from "@/components/faq-section";
 import { HelpCard } from "@/components/help-card";
@@ -9,42 +10,50 @@ import { ProductGrid } from "@/components/product-grid";
 
 export default function HomePage() {
   const featuredProducts = getFeaturedProducts();
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    "Olá, Antoér Joalheria e Relojoaria! Gostaria de falar sobre alianças sob medida."
+  )}`;
 
   return (
     <>
       <section className="relative overflow-hidden bg-ink text-white">
-        <div className="absolute inset-0 opacity-45">
+        <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=1600&q=80"
-            alt="Joias premium em fundo elegante"
+            src="/produtos/alianca-ouro-18k-pedra-4200.png"
+            alt="Alianças em destaque da Antoér"
             fill
             priority
             sizes="100vw"
             className="object-cover"
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/20" />
+          <div className="absolute inset-0 bg-black/20" />
         </div>
         <div className="relative mx-auto grid min-h-[78svh] max-w-7xl content-end px-4 pb-10 pt-28 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.28em] text-gold">Luxo moderno para momentos especiais</p>
             <h1 className="mt-4 font-serif text-5xl font-semibold leading-tight sm:text-6xl lg:text-7xl">
-              Antoér Joalheria e Relojoaria
+              Alianças sob medida em Ouro 18k, Prata 950, Banhado a Ouro e Moeda
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-white/78 sm:text-lg">
-              Alianças sob medida, joias em ouro e prata, relógios e serviços técnicos com atendimento próximo pelo WhatsApp.
+              Confeccionamos diversos modelos em até 3 dias, com gravação dos nomes e caixinha inclusas como cortesia.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
-                href="/produtos"
+                href="/categorias/aliancas"
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-ink"
               >
-                Ver coleção <ArrowRight size={18} />
+                Ver alianças <ArrowRight size={18} />
               </Link>
-              <Link
-                href="/servicos"
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:border-white hover:bg-white hover:text-ink"
               >
-                Serviços de joalheria
-              </Link>
+                <MessageCircle className="mr-2" size={18} />
+                Falar no WhatsApp
+              </a>
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@
 import { MessageCircle, ShoppingBag } from "lucide-react";
 import { useState } from "react";
 import { useCart } from "@/context/cart-context";
+import { hasValidPrice } from "@/lib/product-pricing";
 import { buildQuoteUrl } from "@/lib/whatsapp";
 import type { Product } from "@/types/product";
 
@@ -10,7 +11,7 @@ export function AddToCartButton({ product, compact = false }: { product: Product
   const { addItem } = useCart();
   const [wasAdded, setWasAdded] = useState(false);
 
-  if (product.price === null || product.isCustomOrder) {
+  if (!hasValidPrice(product)) {
     return (
       <a
         href={buildQuoteUrl(product)}

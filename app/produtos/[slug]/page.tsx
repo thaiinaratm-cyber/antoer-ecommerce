@@ -4,6 +4,7 @@ import { ChevronLeft, MessageCircle } from "lucide-react";
 import { AddToCartButton } from "@/components/add-to-cart-button";
 import { ProductImage } from "@/components/product-image";
 import { ProductGrid } from "@/components/product-grid";
+import { hasValidPrice } from "@/lib/product-pricing";
 import { getProductBySlug, getProductsByCategory } from "@/lib/products";
 import { buildQuoteUrl } from "@/lib/whatsapp";
 
@@ -64,7 +65,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
 
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <AddToCartButton product={product} />
-            {product.allowWhatsappQuote && product.price !== null && (
+            {product.allowWhatsappQuote && hasValidPrice(product) && (
               <a
                 href={buildQuoteUrl(product)}
                 target="_blank"

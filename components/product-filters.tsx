@@ -3,17 +3,52 @@
 import { Search, SlidersHorizontal } from "lucide-react";
 import { useMemo, useState } from "react";
 import { categories } from "@/data/categories";
-import { products } from "@/data/products";
-import { filterProducts, getMaterials } from "@/lib/products";
+import { normalizeText } from "@/lib/format";
 import { ProductGrid } from "@/components/product-grid";
+import type { Product } from "@/types/product";
 
-export function ProductFilters() {
-  const [query, setQuery] = useState("");
+function filterVisibleProducts({
+  products,
+  query,
+  category,
+  material
+}: {
+  products: Product[];
+  query?: string;
+  category?: string;
+  material?: string;
+}) {
+  const normalizedQuery = normalizeText(query ?? "");
+
+  return products.filter((product) => {
+    const searchable = normalizeText(
+      [product.name, product.category, product.subcategory, product.material, product.description].join(" ")
+    );
+    const matchesQuery = normalizedQuery ? searchable.includes(normalizedQuery) : true;
+    const matchesCategory = category ? product.category === category : true;
+    const matchesMaterial = material ? product.material === material : true;
+
+    return matchesQuery && matchesCategory && matchesMaterial;
+  });
+}
+
+export function ProductFilters({
+  initialQuery = "",
+  products,
+  materials
+}: {
+  initialQuery?: string;
+  products: Product[];
+  materials: string[];
+}) {
+  const [query, setQuery] = useState(initialQuery);
   const [category, setCategory] = useState("");
   const [material, setMaterial] = useState("");
 
-  const materials = useMemo(() => getMaterials(), []);
-  const filteredProducts = useMemo(() => filterProducts({ query, category, material }), [query, category, material]);
+  const filteredProducts = useMemo(
+    () => filterVisibleProducts({ products, query, category, material }),
+    [products, query, category, material]
+  );
 
   return (
     <section className="grid gap-6">
@@ -55,8 +90,11 @@ export function ProductFilters() {
           ))}
         </select>
       </div>
-      <p className="text-sm text-taupe">{filteredProducts.length} itens encontrados em {products.length} cadastrados.</p>
-      <ProductGrid products={filteredProducts} />
+      <p className="text-sm text-taupe">{filteredProducts.length} itens encontrados em {products.length} cadastrados com imagem.</p>
+      <ProductGrid
+        products={filteredProducts}
+        emptyMessage={query ? "Nenhum produto encontrado para sua busca." : undefined}
+      />
     </section>
   );
 }

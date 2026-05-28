@@ -1,10 +1,15 @@
 import { ProductFilters } from "@/components/product-filters";
+import { getMaterials, getVisibleProducts } from "@/lib/products";
 
 export const metadata = {
   title: "Produtos | Antoér Joalheria"
 };
 
-export default function ProductsPage() {
+export default function ProductsPage({ searchParams }: { searchParams?: { busca?: string } }) {
+  const searchTerm = searchParams?.busca ?? "";
+  const visibleProducts = getVisibleProducts();
+  const materials = getMaterials(visibleProducts);
+
   return (
     <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
       <div className="mb-8 max-w-3xl">
@@ -14,7 +19,7 @@ export default function ProductsPage() {
           Explore joias, alianças, relógios e serviços. Use os filtros para encontrar por categoria, material ou termo.
         </p>
       </div>
-      <ProductFilters />
+      <ProductFilters initialQuery={searchTerm} products={visibleProducts} materials={materials} />
     </section>
   );
 }
