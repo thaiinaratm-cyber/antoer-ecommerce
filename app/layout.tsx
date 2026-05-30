@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Footer } from "@/components/footer";
+import { FloatingWhatsappButton } from "@/components/floating-whatsapp-button";
 import { Header } from "@/components/header";
 import { Providers } from "@/app/providers";
 import type { ReactNode } from "react";
@@ -19,6 +20,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <Header />
           <main>{children}</main>
           <Footer />
+          <FloatingWhatsappButton />
         </Providers>
       </body>
     </html>

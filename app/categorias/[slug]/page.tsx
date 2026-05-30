@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ProductGrid } from "@/components/product-grid";
+import { SortSelect } from "@/components/sort-select";
+import { normalizeSortOrder, sortProducts } from "@/lib/product-sorting";
 import { getCategoryBySlug, getProductsByCategory } from "@/lib/products";
 import type { Product } from "@/types/product";
 
@@ -121,7 +123,7 @@ export default function CategoryPage({
   searchParams
 }: {
   params: { slug: string };
-  searchParams?: { subcategoria?: string };
+  searchParams?: { subcategoria?: string; ordem?: string };
 }) {
   const category = getCategoryBySlug(params.slug);
 
@@ -131,10 +133,25 @@ export default function CategoryPage({
 
   const categoryProducts = getProductsByCategory(category.name);
   const selectedSubcategory = searchParams?.subcategoria ?? "";
+  const sortOrder = normalizeSortOrder(searchParams?.ordem);
   const filterOptions = categoryFilters[category.slug] ?? [];
   const filteredProducts = selectedSubcategory
     ? categoryProducts.filter((product) => matchesProductFilter(product, selectedSubcategory))
     : categoryProducts;
+  const sortedProducts = sortProducts(filteredProducts, sortOrder);
+  const buildCategoryHref = (subcategory?: string) => {
+    const params = new URLSearchParams();
+
+    if (subcategory) {
+      params.set("subcategoria", subcategory);
+    }
+    if (sortOrder !== "relevantes") {
+      params.set("ordem", sortOrder);
+    }
+
+    const query = params.toString();
+    return query ? `/categorias/${category.slug}?${query}` : `/categorias/${category.slug}`;
+  };
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
@@ -146,7 +163,7 @@ export default function CategoryPage({
       {filterOptions.length > 0 && (
         <div className="mb-8 flex flex-wrap gap-2">
           <Link
-            href={`/categorias/${category.slug}`}
+            href={buildCategoryHref()}
             className={`rounded-full border px-3 py-2 text-xs font-medium transition ${
               selectedSubcategory
                 ? "border-black/10 bg-white text-ink hover:border-gold hover:text-gold"
@@ -161,7 +178,7 @@ export default function CategoryPage({
             return (
               <Link
                 key={filter.slug}
-                href={`/categorias/${category.slug}?subcategoria=${filter.slug}`}
+                href={buildCategoryHref(filter.slug)}
                 className={`rounded-full border px-3 py-2 text-xs font-medium transition ${
                   isActive
                     ? "border-ink bg-ink text-white"
@@ -174,8 +191,11 @@ export default function CategoryPage({
           })}
         </div>
       )}
+      <div className="mb-5 flex justify-end">
+        <SortSelect value={sortOrder} />
+      </div>
       <ProductGrid
-        products={filteredProducts}
+        products={sortedProducts}
         emptyMessage="Nenhum produto com imagem cadastrado nesta categoria."
       />
     </section>

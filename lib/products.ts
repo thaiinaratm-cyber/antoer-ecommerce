@@ -49,6 +49,20 @@ export function getFeaturedProducts() {
   return getVisibleProducts().filter((product) => product.featured);
 }
 
+export function getHomeFeaturedProducts(minimum = 5) {
+  const visibleProducts = getVisibleProducts();
+  const featuredProducts = visibleProducts.filter((product) => product.featured);
+
+  if (featuredProducts.length >= minimum) {
+    return featuredProducts;
+  }
+
+  const featuredIds = new Set(featuredProducts.map((product) => product.id));
+  const complementaryProducts = visibleProducts.filter((product) => !featuredIds.has(product.id));
+
+  return [...featuredProducts, ...complementaryProducts].slice(0, minimum);
+}
+
 export function getProductsByCategory(category: CategoryName) {
   return getVisibleProducts().filter((product) => product.category === category);
 }

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { ChevronLeft, MessageCircle } from "lucide-react";
 import { AddToCartButton } from "@/components/add-to-cart-button";
 import { ProductImage } from "@/components/product-image";
+import { ProductPrice } from "@/components/product-price";
 import { ProductGrid } from "@/components/product-grid";
 import { hasValidPrice } from "@/lib/product-pricing";
 import { getProductBySlug, getProductsByCategory } from "@/lib/products";
@@ -23,6 +24,10 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
   }
 
   const related = getProductsByCategory(product.category).filter((item) => item.id !== product.id).slice(0, 4);
+  const imageNotice =
+    product.category === "Alianças"
+      ? "Imagem ilustrativa. Modelos sob encomenda podem variar conforme largura, numeração, acabamento e gravação escolhidos."
+      : "Imagem ilustrativa. Produto sujeito a variações de modelo, acabamento e disponibilidade.";
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
@@ -30,14 +35,17 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
         <ChevronLeft size={18} /> Voltar ao catálogo
       </Link>
       <div className="mt-6 grid gap-8 lg:grid-cols-[1fr_0.9fr]">
-        <div className="relative aspect-[4/5] overflow-hidden rounded-lg bg-champagne shadow-soft">
-          <ProductImage
-            src={product.images?.[0]}
-            alt={product.name}
-            sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover"
-            priority
-          />
+        <div>
+          <div className="relative aspect-[4/5] overflow-hidden rounded-lg bg-champagne shadow-soft">
+            <ProductImage
+              src={product.images?.[0]}
+              alt={product.name}
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+              priority
+            />
+          </div>
+          <p className="mt-3 text-xs leading-5 text-taupe">{imageNotice}</p>
         </div>
         <div className="self-center">
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-gold">{product.category}</p>
@@ -47,11 +55,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
           <div className="mt-6 grid gap-3 rounded-lg border border-black/10 bg-white p-5">
             <div className="flex items-center justify-between gap-4 border-b border-black/10 pb-3">
               <span className="text-sm text-taupe">Preço</span>
-              <strong className="text-xl text-ink">{product.priceLabel}</strong>
-            </div>
-            <div className="flex items-center justify-between gap-4 border-b border-black/10 pb-3">
-              <span className="text-sm text-taupe">Parcelamento</span>
-              <span className="text-sm font-medium text-ink">{product.installments}</span>
+              <ProductPrice product={product} />
             </div>
             <div className="flex items-center justify-between gap-4 border-b border-black/10 pb-3">
               <span className="text-sm text-taupe">Material</span>

@@ -32,13 +32,18 @@ O CSV deve ser salvo em UTF-8 e separado por ponto e vírgula (`;`). Esse é o f
 
 O script lê o CSV e recria automaticamente `data/products.ts`, que é o arquivo usado pela loja. As colunas são:
 
-`name`, `category`, `subcategory`, `material`, `price`, `priceLabel`, `installments`, `description`, `image`, `featured`, `isCustomOrder`, `allowWhatsappQuote`, `stockStatus`.
+`name`, `category`, `subcategory`, `material`, `price`, `oldPrice`, `discountPercent`, `cashDiscountPercent`, `installmentsCount`, `priceLabel`, `installments`, `description`, `image`, `featured`, `isCustomOrder`, `allowWhatsappQuote`, `stockStatus`.
 
 Regras importantes:
 
 - Use `;` como separador de colunas.
 - Para centavos, use vírgula, por exemplo `249,90`.
 - `price` vazio gera produto sob orçamento com `price: null`.
+- Para preço normal, preencha apenas `price`, por exemplo `259`.
+- Para produto promocional, preencha `oldPrice` maior que `price`, por exemplo `oldPrice = 289` e `price = 259`.
+- `discountPercent` pode ficar vazio; a loja calcula o percentual automaticamente quando `oldPrice` for maior que `price`.
+- `cashDiscountPercent` permite mostrar preço à vista com desconto, por exemplo `5`.
+- `installmentsCount` permite mostrar parcela calculada, por exemplo `10` para `10x sem juros`.
 - `featured`, `isCustomOrder` e `allowWhatsappQuote` aceitam `sim` ou `não`.
 - `stockStatus` aceita `disponível`, `sob encomenda` ou `indisponível`.
 - A coluna `image` deve ter só o nome do arquivo, por exemplo `anel-ouro.jpg`; o script gera `/produtos/anel-ouro.jpg`.
@@ -59,11 +64,14 @@ O nome do arquivo ajuda o sistema a identificar categoria, material e preço. Ex
 
 - `anel-ouro-18k-perola-990.jpg`
 - `brinco-ponto-luz-zirconia-179.jpg`
-- `alianca-prata-950-namoro-380.jpg`
+- `alianca-prata-950-namoro-259.jpg`
+- `alianca-prata-950-namoro-289-259.jpg`
 - `alianca-ouro-18k-pedra-4200.png`
 - `alianca-banhado-ouro-classica-299.webp`
 
 Para preços, use o último número do nome do arquivo. Exemplo: `alianca-ouro-18k-pedra-4200.png` gera `R$ 4.200,00`. Se não houver preço, o produto fica como `Sob orçamento`.
+
+Para preço promocional, use dois valores no final do arquivo: primeiro o preço antigo e depois o preço atual. Exemplo: `alianca-prata-950-namoro-289-259.jpg` gera `oldPrice = 289` e `price = 259`. Com apenas um valor, como `alianca-prata-950-namoro-259.jpg`, o gerador preenche somente `price = 259`.
 
 Campos gerados automaticamente:
 

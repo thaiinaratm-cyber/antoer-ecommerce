@@ -4,7 +4,9 @@ import { Search, SlidersHorizontal } from "lucide-react";
 import { useMemo, useState } from "react";
 import { categories } from "@/data/categories";
 import { normalizeText } from "@/lib/format";
+import { normalizeSortOrder, sortProducts, type ProductSortOrder } from "@/lib/product-sorting";
 import { ProductGrid } from "@/components/product-grid";
+import { SortSelect } from "@/components/sort-select";
 import type { Product } from "@/types/product";
 
 function filterVisibleProducts({
@@ -34,20 +36,23 @@ function filterVisibleProducts({
 
 export function ProductFilters({
   initialQuery = "",
+  initialOrder = "relevantes",
   products,
   materials
 }: {
   initialQuery?: string;
+  initialOrder?: ProductSortOrder;
   products: Product[];
   materials: string[];
 }) {
   const [query, setQuery] = useState(initialQuery);
   const [category, setCategory] = useState("");
   const [material, setMaterial] = useState("");
+  const sortOrder = normalizeSortOrder(initialOrder);
 
   const filteredProducts = useMemo(
-    () => filterVisibleProducts({ products, query, category, material }),
-    [products, query, category, material]
+    () => sortProducts(filterVisibleProducts({ products, query, category, material }), sortOrder),
+    [products, query, category, material, sortOrder]
   );
 
   return (
@@ -90,7 +95,10 @@ export function ProductFilters({
           ))}
         </select>
       </div>
-      <p className="text-sm text-taupe">{filteredProducts.length} itens encontrados em {products.length} cadastrados com imagem.</p>
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-sm text-taupe">{filteredProducts.length} itens encontrados em {products.length} cadastrados com imagem.</p>
+        <SortSelect value={sortOrder} />
+      </div>
       <ProductGrid
         products={filteredProducts}
         emptyMessage={query ? "Nenhum produto encontrado para sua busca." : undefined}

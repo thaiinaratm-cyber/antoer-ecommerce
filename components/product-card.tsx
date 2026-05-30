@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { AddToCartButton } from "@/components/add-to-cart-button";
 import { ProductImage } from "@/components/product-image";
+import { ProductPrice } from "@/components/product-price";
 import type { Product } from "@/types/product";
 
 export function ProductCard({ product }: { product: Product }) {
@@ -27,10 +28,7 @@ export function ProductCard({ product }: { product: Product }) {
           </Link>
           <p className="mt-1 text-sm text-taupe">{product.material}</p>
         </div>
-        <div>
-          <p className="text-lg font-semibold text-ink">{product.priceLabel}</p>
-          <p className="text-sm text-taupe">{product.installments}</p>
-        </div>
+        <ProductPrice product={product} compact />
         <AddToCartButton product={product} compact />
       </div>
     </article>

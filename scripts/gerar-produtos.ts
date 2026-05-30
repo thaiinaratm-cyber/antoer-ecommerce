@@ -10,6 +10,10 @@ type ProductRow = {
   subcategory: string;
   material: string;
   price: string;
+  oldPrice: string;
+  discountPercent: string;
+  cashDiscountPercent: string;
+  installmentsCount: string;
   priceLabel: string;
   installments: string;
   description: string;
@@ -26,6 +30,10 @@ const COLUMNS: Array<keyof ProductRow> = [
   "subcategory",
   "material",
   "price",
+  "oldPrice",
+  "discountPercent",
+  "cashDiscountPercent",
+  "installmentsCount",
   "priceLabel",
   "installments",
   "description",
@@ -218,6 +226,25 @@ function detectPrice(tokens: string[]) {
   return null;
 }
 
+function detectPricing(tokens: string[]) {
+  const priceTokens = tokens
+    .map((token, index) => ({ token, index }))
+    .filter(({ token }) => /^\d{2,6}$/.test(token) && !["925", "950", "750", "18"].includes(token));
+  const price = detectPrice(tokens);
+
+  if (price === null || priceTokens.length < 2) {
+    return { price, oldPrice: null };
+  }
+
+  const last = priceTokens[priceTokens.length - 1];
+  const previous = priceTokens[priceTokens.length - 2];
+  const previousValue = Number(previous.token);
+  const lastValue = Number(last.token);
+  const oldPrice = previous.index === last.index - 1 && previousValue > lastValue ? previousValue : null;
+
+  return { price: lastValue, oldPrice };
+}
+
 function hasOuro18k(tokens: string[]) {
   return tokens.includes("ouro18k") || (tokens.includes("ouro") && tokens.includes("18k"));
 }
@@ -316,7 +343,7 @@ function detectSubcategory(category: string, tokens: string[], material: string)
   return category;
 }
 
-function buildName(tokens: string[], price: number | null) {
+function buildName(tokens: string[], price: number | null, oldPrice: number | null = null) {
   if (isAllianceSolitaireCombo(tokens)) {
     const material = detectMaterial(tokens);
     const materialName = material === "Banhado a ouro" ? "Banhado a Ouro" : material;
@@ -325,7 +352,12 @@ function buildName(tokens: string[], price: number | null) {
     return `Combo Alianças${suffix} + Anel Solitário`;
   }
 
-  const cleanTokens = tokens.filter((token, index) => !(price !== null && token === String(price) && index === tokens.length - 1));
+  const cleanTokens = tokens.filter((token, index) => {
+    const isCurrentPrice = price !== null && token === String(price) && index === tokens.length - 1;
+    const isOldPrice = oldPrice !== null && token === String(oldPrice) && index === tokens.length - 2;
+
+    return !isCurrentPrice && !isOldPrice;
+  });
   const displayTokens = cleanTokens.reduce<string[]>((accumulator, token, index) => {
     const next = cleanTokens[index + 1];
     if (token === "banho" && next === "de") {
@@ -347,6 +379,14 @@ function buildName(tokens: string[], price: number | null) {
 
 function formatPriceForCsv(price: number | null) {
   return price === null ? "" : String(price).replace(".", ",");
+}
+
+function buildInstallmentsCount(category: string, material: string, price: number | null) {
+  if (price === null) return "";
+  if ((category === "Alianças" || category === "Anéis") && material === "Ouro 18k") return "12";
+  if (category === "Alianças" && (material.includes("Prata") || material === "Banhado a ouro" || material === "Moeda")) return "6";
+  if (category === "Anéis" && material.includes("Prata")) return "6";
+  return "";
 }
 
 function formatPriceLabel(price: number | null) {
@@ -449,17 +489,21 @@ function buildStockStatus(category: string, material: string, price: number | nu
 
 function buildRowFromImage(fileName: string): ProductRow {
   const tokens = getTokens(fileName);
-  const price = detectPrice(tokens);
+  const { price, oldPrice } = detectPricing(tokens);
   const category = detectCategory(tokens);
   const material = detectMaterial(tokens);
   const subcategory = detectSubcategory(category, tokens, material);
 
   return {
-    name: buildName(tokens, price),
+    name: buildName(tokens, price, oldPrice),
     category,
     subcategory,
     material,
     price: formatPriceForCsv(price),
+    oldPrice: formatPriceForCsv(oldPrice),
+    discountPercent: "",
+    cashDiscountPercent: "",
+    installmentsCount: buildInstallmentsCount(category, material, price),
     priceLabel: formatPriceLabel(price),
     installments: buildInstallments(category, material, price),
     description: generateDescription(category, material, tokens, price),

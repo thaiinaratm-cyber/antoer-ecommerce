@@ -18,6 +18,10 @@ export type Product = {
   subcategory: string;
   material: string;
   price: number | null;
+  oldPrice?: number | null;
+  discountPercent?: number | null;
+  cashDiscountPercent?: number | null;
+  installmentsCount?: number | null;
   priceLabel: string;
   installments: string;
   description: string;

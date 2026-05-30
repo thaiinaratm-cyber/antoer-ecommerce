@@ -12,6 +12,10 @@ type ImportedProduct = {
   subcategory: string;
   material: string;
   price: number | null;
+  oldPrice: number | null;
+  discountPercent: number | null;
+  cashDiscountPercent: number | null;
+  installmentsCount: number | null;
   priceLabel: string;
   installments: string;
   description: string;
@@ -28,6 +32,10 @@ const REQUIRED_COLUMNS = [
   "subcategory",
   "material",
   "price",
+  "oldPrice",
+  "discountPercent",
+  "cashDiscountPercent",
+  "installmentsCount",
   "priceLabel",
   "installments",
   "description",
@@ -164,6 +172,20 @@ function parsePrice(value: string) {
   return price;
 }
 
+function parseOptionalNumber(value: string) {
+  const normalized = value.trim();
+  if (!normalized) {
+    return null;
+  }
+
+  const number = Number(normalized.replace(/\./g, "").replace(",", "."));
+  if (Number.isNaN(number)) {
+    throw new Error(`Numero invalido: ${value}`);
+  }
+
+  return number;
+}
+
 function formatCurrency(value: number) {
   return new Intl.NumberFormat("pt-BR", {
     style: "currency",
@@ -209,6 +231,7 @@ function rowToProduct(row: CsvRow, usedSlugs: Set<string>): ImportedProduct {
 
   const price = parsePrice(row.price);
   const slug = uniqueSlug(slugify(row.name), usedSlugs);
+  const oldPrice = parseOptionalNumber(row.oldPrice ?? "");
 
   return {
     id: slug,
@@ -218,6 +241,10 @@ function rowToProduct(row: CsvRow, usedSlugs: Set<string>): ImportedProduct {
     subcategory: row.subcategory,
     material: row.material,
     price,
+    oldPrice,
+    discountPercent: parseOptionalNumber(row.discountPercent ?? ""),
+    cashDiscountPercent: parseOptionalNumber(row.cashDiscountPercent ?? ""),
+    installmentsCount: parseOptionalNumber(row.installmentsCount ?? ""),
     priceLabel: row.priceLabel || (price === null ? "Sob orçamento" : formatCurrency(price)),
     installments: row.installments,
     description: row.description,

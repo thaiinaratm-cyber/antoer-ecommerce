@@ -3,13 +3,13 @@ import Link from "next/link";
 import { ArrowRight, BadgeCheck, Gem, MessageCircle, ShieldCheck, Sparkles } from "lucide-react";
 import { categories } from "@/data/categories";
 import { WHATSAPP_NUMBER } from "@/lib/constants";
-import { getFeaturedProducts } from "@/lib/products";
+import { getHomeFeaturedProducts } from "@/lib/products";
 import { FaqSection } from "@/components/faq-section";
 import { HelpCard } from "@/components/help-card";
 import { ProductGrid } from "@/components/product-grid";
 
 export default function HomePage() {
-  const featuredProducts = getFeaturedProducts();
+  const featuredProducts = getHomeFeaturedProducts(5);
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
     "Olá, Antoér Joalheria e Relojoaria! Gostaria de falar sobre alianças sob medida."
   )}`;
